@@ -19,7 +19,16 @@ buildscript {
     dependencies {
         classpath('com.android.tools.build:gradle:7.4.2')
         classpath('com.facebook.react:react-native-gradle-plugin')
+        // this is new setup
+        classpath 'com.google.gms:google-services:4.4.0'
     }
+    plugins {
+  // ...
+
+  // Add the dependency for the Google services Gradle plugin
+  id("com.google.gms.google-services") version "4.4.1" apply false
+
+}
 }
 
 allprojects {
